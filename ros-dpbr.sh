@@ -6,7 +6,7 @@ cd ./pbr
 wget --no-check-certificate -c -O CN_v6.txt https://raw.githubusercontent.com/mayaxcn/china-ip-list/master/chnroute_v6.txt
 
 {
-echo "/ip firewall address-list"
+echo "/ipv6 firewall address-list"
 
 for net in $(cat CN_v6.txt) ; do
   echo "add list=CN address=$net comment=AS4809"
